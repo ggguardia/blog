@@ -1,5 +1,7 @@
 FROM centos/python-36-centos7:latest
 
+USER root
+
 COPY . /tmp/src
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
