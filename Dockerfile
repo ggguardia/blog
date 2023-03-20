@@ -14,7 +14,7 @@ RUN rm -rf /tmp/src/.git* && \
     chmod -R g+w /tmp/src
     
 
-USER root
+USER 1001
 
 ENV S2I_SCRIPTS_PATH=/usr/libexec/s2i \
     S2I_BASH_ENV=/opt/app-root/etc/scl_enable \
