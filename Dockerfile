@@ -2,6 +2,8 @@ FROM centos/python-36-centos7:latest
 
 USER root
 
+RUN /usr/local/bin/python -m pip install --upgrade pip
+
 COPY . /tmp/src
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
