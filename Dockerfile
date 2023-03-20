@@ -21,7 +21,7 @@ ENV S2I_SCRIPTS_PATH=/usr/libexec/s2i \
 
 RUN /opt/app-root/bin/python3.9 -m pip install --upgrade pip
 
-RUN pip uninstall psycopg2; pip list --outdated; pip install --upgrade wheel; pip install --upgrade setuptools; pip install psycopg2
+RUN pip3 install psycopg2
 
 RUN /tmp/scripts/assemble
 
