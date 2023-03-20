@@ -19,6 +19,8 @@ ENV S2I_SCRIPTS_PATH=/usr/libexec/s2i \
     DISABLE_COLLECTSTATIC=1 \
     DISABLE_MIGRATE=1
 
+RUN /opt/app-root/bin/python3.9 -m pip install --upgrade pip
+
 RUN /tmp/scripts/assemble
 
 CMD [ "/tmp/scripts/run" ]
