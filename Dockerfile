@@ -21,6 +21,8 @@ ENV S2I_SCRIPTS_PATH=/usr/libexec/s2i \
     
 RUN pip install wheel
 
+RUN pip install python 3.9
+
 RUN /opt/app-root/bin/python3.9 -m pip install --upgrade pip
 
 RUN pip3 install psycopg2
