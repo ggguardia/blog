@@ -12,8 +12,13 @@ RUN rm -rf /tmp/src/.git* && \
     chown -R 1001 /tmp/src && \
     chgrp -R 0 /tmp/src && \
     chmod -R g+w /tmp/src
+    
+RUN pip3 install powershift-cli --user
+RUN pip3 install powershift-image --user
+RUN pip3 install click --user
+    
 
-USER 1000
+USER 1001
 
 ENV S2I_SCRIPTS_PATH=/usr/libexec/s2i \
     S2I_BASH_ENV=/opt/app-root/etc/scl_enable \
