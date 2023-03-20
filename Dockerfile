@@ -18,6 +18,8 @@ ENV S2I_SCRIPTS_PATH=/usr/libexec/s2i \
     S2I_BASH_ENV=/opt/app-root/etc/scl_enable \
     DISABLE_COLLECTSTATIC=1 \
     DISABLE_MIGRATE=1
+    
+RUN pip install wheel
 
 RUN /opt/app-root/bin/python3.9 -m pip install --upgrade pip
 
